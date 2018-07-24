@@ -1,20 +1,142 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="ui container">
+  <div class="ui segment">
+    <h2 class="ui header">Built-in Pipes</h2>
+    <div class="ui grid padded ">
+      <div class="row">
+        <div class="ui card eight wide column">
+          <div class="content">
+            <div class="header">Currency Pipes</div>
+            <div class="description">
+              <p ngNonBindable>{{ 1234.56 | currency:'CAD' }}</p>
+              <p>{{ 1234.56 | currency:"CAD" }}</p>
 
+              <p ngNonBindable>{{ 1234.56 | currency:'CAD':'code' }}</p>
+              <p>{{ 1234.56 | currency:'CAD':'code'}}</p>
+
+              <p ngNonBindable>{{ 1234.56 | currency:'CAD':'symbol' }}</p>
+              <p>{{ 1234.56 | currency:'CAD':'symbol'}}</p>
+
+              <p ngNonBindable>{{ 1234.56 | currency:'CAD':'symbol-narrow' }}</p>
+              <p>{{ 1234.56 | currency:'CAD':'symbol-narrow'}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="ui card eight wide column">
+          <div class="content">
+            <div class="header">Date Pipes</div>
+            <div class="description">
+              <p ngNonBindable>{{ dateVal | date: 'shortTime' }}</p>
+              <p>{{ dateVal | date: 'shortTime' }}</p>
+
+              <p ngNonBindable>{{ dateVal | date:'fullDate' }}</p>
+              <p>{{ dateVal | date: 'fullDate' }}</p>
+
+              <p ngNonBindable>{{ dateVal | date: 'd/M/y' }}</p>
+              <p>{{ dateVal | date: 'd/M/y' }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="ui card eight wide column">
+          <div class="content">
+            <div class="header">Decimal Pipes</div>
+            <div class="description">
+              <!-- "{minIntegerDigits}. {minFractionDigits}-{maxFractionDigits}" -->
+              <p ngNonBindable>{{ 3.14159265 | number: '3.1-2' }}</p>
+              <p>{{ 3.14159265 | number: '3.1-2' }}</p>
+
+              <p ngNonBindable>{{ 30 | number: '1.1-2' }}</p>
+              <p>{{ 30 | number: '1.1-2' }}</p>
+
+              <p ngNonBindable>{{ 3.14159265 | number: '1.4-4' }}</p>
+              <p>{{ 3.14159265 | number: '1.4-4' }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="ui card eight wide column">
+          <div class="content">
+            <div class="header">JSON Pipes</div>
+            <div class="description">
+              <p ngNonBindable>{{ jsonVal }}</p>
+              <p>{{ jsonVal }}</p>
+
+              <p ngNonBindable>{{ jsonVal | json }}</p>
+              <p>{{ jsonVal | json }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="ui card eight wide column">
+          <div class="content">
+            <div class="header">LowerCase Pipes</div>
+            <div class="description">
+              <p ngNonBindable>{{ 'MINA CHOI' | lowercase}}</p>
+              <p>{{ 'MINA CHOI' | lowercase}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="ui card eight wide column">
+          <div class="content">
+            <div class="header">UpperCase Pipes</div>
+            <div class="description">
+              <p ngNonBindable>{{ 'mina choi' | lowercase}}</p>
+              <p>{{ 'mina choi' | uppercase}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="ui card eight wide column">
+          <div class="content">
+            <div class="header">Percent Pipes</div>
+            <div class="description">
+              <p ngNonBindable>{{ 0.123456 | percent }}</p>
+              <p>{{ 0.123456 | percent }}</p>
+
+              <p ngNonBindable>{{ 0.123456 | percent: '2.1-2' }}</p>
+              <p>{{ 0.123456 | percent: '2.1-2' }}</p>
+
+              <p ngNonBindable>{{ 42 | percent: '10.4-4' }}</p>
+              <p>{{ 0.123456 | percent : "10.4-4" }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="ui card eight wide column">
+          <div class="content">
+            <div class="header">Slice Pipes</div>
+            <div class="description">
+              <!-- index 1 - 3까지 -->
+              <p ngNonBindable>{{ [1,2,3,4,5,6] | slice:1:3 }}</p>
+              <p>{{ [1,2,3,4,5,6] | slice:1:3 }}</p>
+
+              <!-- 첫번 째 파라미터 인덱스부터 끝까지 -->
+              <p ngNonBindable>{{ [1,2,3,4,5,6] | slice:4 }}</p>
+              <p>{{ [1,2,3,4,5,6] | slice:4 }}</p>
+
+              <!--  앞 뒤의 해당 index를 제외한 배열 -->
+              <p ngNonBindable>{{ [1,2,3,4,5,6] | slice:2:-1 }}</p>
+              <p>{{ [1,2,3,4,5,6] | slice:2:-1 }}</p>
+              <!-- slice:2:-1 means return the items from the 2nd index to one from the end of the array. -->
+
+              <pre ngNonBindable>
+                &lt;ul&gt;
+                  &lt;li *ngFor=&quot;let v of [1,2,3,4,5,6] | slice:2:-1&quot;&gt;
+                    {{v}}
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+                    </pre>
+
+              <ul>
+                <li *ngFor="let v of [1,2,3,4,5,6] | slice:2:-1">
+                  {{v}}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
