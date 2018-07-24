@@ -1,0 +1,23 @@
+<div class="ui segment">
+  <h2 class="ui header">Async Pipes</h2>
+  <div class="ui grid padded ">
+    <div class="row">
+      <div class="ui card eight wide column">
+        <div class="content">
+          <div class="header">AsyncPipe with promises</div>
+          <!-- 변수에 promise 결과값 바인딩 -->
+          <!-- <p class="card-text" ngNonBindable>{{ promiseData }}</p> 
+          <p class="card-text">{{ promiseData }}</p>  -->
+          <p class="card-text" ngNonBindable>{{ promise | async }}</p> 
+          <p class="card-text">{{ promise |async }}</p> 
+        </div>
+      </div>
+      <div class="ui card eight wide column">
+        <div class="content">
+          <div class="header">AsyncPipe with observables</div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
