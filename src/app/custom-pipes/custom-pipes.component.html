@@ -5,13 +5,13 @@
         <div class="ui card eight wide column">
           <div class="content">
             <div class="header">Default Pipe</div>
-
+            <img [src]="imageUrl | default:'http://s3.amazonaws.com/uifaces/faces/twitter/sillyleo/128.jpg'"/>
           </div>
         </div>
         <div class="ui card eight wide column">
           <div class="content">
-            <div class="header">AsyncPipe with observables</div>
-
+            <div class="header">Multiple params</div>
+            <img [src]="imageUrl | default:'http://s3.amazonaws.com/uifaces/faces/twitter/sillyleo/128.jpg':true"/>
           </div>
         </div>
       </div>

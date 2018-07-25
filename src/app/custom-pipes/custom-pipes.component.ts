@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./custom-pipes.component.css']
 })
 export class CustomPipesComponent implements OnInit {
-
+  imageUrl: string = "";
+  
   constructor() { }
 
   ngOnInit() {
