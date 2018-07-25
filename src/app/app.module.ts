@@ -7,6 +7,7 @@ import { AsyncPipesComponent } from './async-pipes/async-pipes.component';
 import { CustomPipesComponent } from './custom-pipes/custom-pipes.component';
 import { BuiltInPipesComponent } from './built-in-pipes/built-in-pipes.component';
 import { DefaultPipe } from './default.pipe';
+import { CleanPipe } from './clean.pipe';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { DefaultPipe } from './default.pipe';
     AsyncPipesComponent,
     CustomPipesComponent,
     BuiltInPipesComponent,
-    DefaultPipe
+    DefaultPipe,
+    CleanPipe
   ],
   imports: [
     BrowserModule

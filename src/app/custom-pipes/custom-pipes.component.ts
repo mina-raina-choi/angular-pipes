@@ -11,6 +11,7 @@ import { Component, OnInit } from '@angular/core';
 // transform function만 구현하면 된다.
 export class CustomPipesComponent implements OnInit {
   imageUrl: string = "";
+  text: string = "Hi hell, boo, bye..d.ef damn"
   
   constructor() { }
 

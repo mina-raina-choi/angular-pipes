@@ -17,6 +17,12 @@
 
               <p ngNonBindable>{{ 1234.56 | currency:'CAD':'symbol-narrow' }}</p>
               <p>{{ 1234.56 | currency:'CAD':'symbol-narrow'}}</p>
+
+              <p ngNonBindable>{{ 34.94 | currency: 'USD':true }}</p>
+              <p>{{ 34.94 | currency: 'USD': true}}</p>
+
+              <p ngNonBindable>{{ 34.94 | currency: 'USD' }}</p>
+              <p>{{ 34.94 | currency: 'USD'}}</p>
             </div>
           </div>
         </div>
